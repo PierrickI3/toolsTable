@@ -23,8 +23,18 @@ $(document).ready(function () {
       },
       { data: 'Description' },
       { data: 'Company' },
-      { data: 'Source' },
-      { data: 'Platform' },
+      {
+        data: 'Source',
+      },
+      {
+        data: 'Platform',
+        render: function (data, type) {
+          if (type === 'display') {
+            return data === 'Cloud' ? '<span style="color:#27AE60; font-size:16px">☁️</span>' : '🖥️';
+          }
+          return data;
+        },
+      },
       {
         data: 'API',
         render: function (data, type) {
