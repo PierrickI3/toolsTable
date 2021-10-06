@@ -12,7 +12,15 @@ $(document).ready(function () {
       ['10 rows', '25 rows', '50 rows', 'Show all'],
     ],
     columns: [
-      { data: 'Name' },
+      {
+        data: 'Name',
+        render: function (data, type) {
+          if (type === 'display') {
+            return '<b>' + data + '</b>';
+          }
+          return data;
+        },
+      },
       { data: 'Description' },
       { data: 'Company' },
       { data: 'Source' },
