@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css"></script>
+    <link href="./index.css" rel="stylesheet" />
+    <title>Tools</title>
+  </head>
+  <body style="font-family: Helvetica; font-size: 12px">
+    <div id="main">
+      <table id="example" class="display responsive" style="width: 100%">
+        <thead>
+          <tr>
+            <th title="Name">Name</th>
+            <th title="Description">Description</th>
+            <th title="Company">Company</th>
+            <th title="Source">Source</th>
+            <th title="Platform">Platform</th>
+            <th title="API">API?</th>
+            <th title="Embeddable">Embeddable?</th>
+            <th title="CanEmbedOthers">Can Embed Others?</th>
+            <th title="HasIntegrations">Has Integrations?</th>
+            <th title="CostPerUser">Cost per User</th>
+            <th title="NumberOfUsers"># of Users</th>
+            <th title="Country">Country</th>
+            <th title="SCs">Used by SCs</th>
+            <th title="AEs">Used by AEs</th>
+            <th title="SAs">Used by SAs</th>
+            <th title="CSMs">Used by CSMs</th>
+            <th title="BCs">Used by BCs</th>
+            <th title="Similar">Similar</th>
+            <th title="Comments">Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Adobe Creative Cloud</td>
+            <td>Applications and services that gives subscribers access to a collection of software used for graphic design, video editing, web development, photography</td>
+            <td>Adobe</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Aha</td>
+            <td>Allows users to build and share visual roadmaps. It links key strategic goals and initiatives to releases and features</td>
+            <td>Aha</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Alinean</td>
+            <td>Business value marketing and selling messaging and tools</td>
+            <td>Alinean</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Aviso</td>
+            <td>Predictive AI platform for forecasting, risk mitigation and revenue acceleration</td>
+            <td>Aviso</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td>Used by Jacklyn Spillane's team</td>
+          </tr>
+          <tr>
+            <td>BriefingSource</td>
+            <td>Event management</td>
+            <td>EchoVision</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td>Used by Leslie Paterson team</td>
+          </tr>
+          <tr>
+            <td>Camtasia</td>
+            <td>Create video tutorials and presentations</td>
+            <td>Techsmith</td>
+            <td>External</td>
+            <td>desktop</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>Adobe Creative Cloud</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CC Portal</td>
+            <td>Set of tools used to deploy use cases, assist with migrations, handle Competency Centers requests</td>
+            <td>Genesys</td>
+            <td>Internal</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>0</td>
+            <td>1300</td>
+            <td>France/Poland/UK</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>GDemo</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Confluence</td>
+            <td>Project collaboration</td>
+            <td>Atlassian</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>Australia</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>DocuSign</td>
+            <td>For contract execution with customers</td>
+            <td>DocuSign</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Formstack Documents (ex-Webmerge)</td>
+            <td>Customizable document templates</td>
+            <td>FormStack</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td>Who is using this?</td>
+          </tr>
+          <tr>
+            <td>GDemo</td>
+            <td>Access to ready-to-go demos</td>
+            <td>Genesys</td>
+            <td>Internal</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>0</td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>CC Portal (Use Case Automation)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Docebo (GenED)</td>
+            <td>Learning Suite</td>
+            <td>Docebo</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>Canada</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Genesys Cloud</td>
+            <td>Communication platform</td>
+            <td>Genesys</td>
+            <td>Internal</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>0</td>
+            <td>5000</td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>Teams, Slack, Zoom</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>GitHub</td>
+            <td>Code repositories</td>
+            <td>Microsoft</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>0</td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Gong</td>
+            <td>Sales AI and machine learning tool. Synching Zoom conversations back into Salesforce</td>
+            <td>Gong.io</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA/Israel</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td>Only AEs in NA</td>
+          </tr>
+          <tr>
+            <td>Google Sheets</td>
+            <td>Spreadsheets</td>
+            <td>Google</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>0</td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>Office 365, SmartSheet</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>JIRA</td>
+            <td>Issue tracking, bug tracking and agile project management</td>
+            <td>Atlassian</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>Australia</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td>Owned by dev</td>
+          </tr>
+          <tr>
+            <td>Knime</td>
+            <td>Analytics ML</td>
+            <td>Knime</td>
+            <td>External</td>
+            <td>desktop</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>Switzerland</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td>Who is using this?</td>
+          </tr>
+          <tr>
+            <td>LinkedIn Sales Navigator</td>
+            <td>Social selling platform that provides features that focus on helping find prospects and build relationships</td>
+            <td>LinkedIn</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LucidChart</td>
+            <td>Web-based proprietary platform that allows users to collaborate on drawing, revising and sharing charts and diagrams</td>
+            <td>Lucid Software</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Nintex</td>
+            <td>Business process Automation, workflow software licensing</td>
+            <td>Nintex</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Office 365</td>
+            <td>Microsoft Office 365 (Word, Excel, Outlook, Planner, Sharepoint)</td>
+            <td>Microsoft</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>Google Sheets, SmartSheet</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OneDrive</td>
+            <td>File sharing and collaboration</td>
+            <td>Microsoft</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Prezi</td>
+            <td>Presentation</td>
+            <td>Prezi</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>QVidian</td>
+            <td>Proposal Management/Creator</td>
+            <td>Upland Software</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ReferenceEdge</td>
+            <td>Used by Advisors and Partner Success Managers to confirm contacts for reference activity</td>
+            <td>Point of Reference</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Revegy</td>
+            <td>Sales execution platform with built-in visualizations for account planning, providing sales teams with deal-winning insights</td>
+            <td>Revegy</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Salesforce</td>
+            <td>CRM</td>
+            <td>Salesforce</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Salesforce for CPQ</td>
+            <td>Customized application built over Salesforce to handle CPQ functionality</td>
+            <td>Genesys</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Seismic</td>
+            <td>Project Management &amp; Enablement, Content Management tools</td>
+            <td>Seismic</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Slack</td>
+            <td>Collaboration and communication platform</td>
+            <td>Microsoft</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>Genesys Cloud Chat</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SmartSheet</td>
+            <td>Collaboration and work management</td>
+            <td>SmartSheet</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>Google Sheets, Office 365</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tableau</td>
+            <td>Data analysis and reporting</td>
+            <td>Tableau</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Taiga</td>
+            <td>Open Source Project Management, Scrum, Kanban, Agile</td>
+            <td>Taiga</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>0</td>
+            <td>5</td>
+            <td>Spain</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>Trello, Office 365 Planner</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Teams</td>
+            <td>Business communication platform</td>
+            <td>Microsoft</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>Genesys Cloud, Slack</td>
+            <td>No direct dial. Also used by Tech Sales</td>
+          </tr>
+          <tr>
+            <td>Traction On Demand</td>
+            <td>Automates complex account hierarchies for up-sell opportunities</td>
+            <td>Traction On Demand</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>Canada</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Trello</td>
+            <td>Project Management</td>
+            <td>Atlassian</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>0</td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>Taiga, Office 365 Planner</td>
+            <td>Also used by Tech Sales</td>
+          </tr>
+          <tr>
+            <td>TruVoice</td>
+            <td>Win/Loss insights and analysis</td>
+            <td>Primary Intelligence</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>WalkMe</td>
+            <td>Step by step guide. Used by Sales ops to assist them. Workflow tool that sits on top of Salesforce</td>
+            <td>WalkMe</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>Israel</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td></td>
+            <td>Used by Sales Ops</td>
+          </tr>
+          <tr>
+            <td>WhatsApp</td>
+            <td>Cross-platform centralized instant messaging (IM) and voice-over-IP (VoIP) service</td>
+            <td>Facebook</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>0</td>
+            <td></td>
+            <td>USA</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>Genesys Cloud, Slack, Teams</td>
+            <td>Used by Sales Ops</td>
+          </tr>
+          <tr>
+            <td>Zoom</td>
+            <td>Video conferencing</td>
+            <td>Zoom</td>
+            <td>External</td>
+            <td>cloud</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td></td>
+            <td></td>
+            <td>USA</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>Genesys Cloud, Teams</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.0/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
