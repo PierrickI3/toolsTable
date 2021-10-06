@@ -7,6 +7,7 @@ $(document).ready(function () {
     buttons: ['colvis'],
     stateSave: true,
     orderCellsTop: true,
+    pageLength: 50,
     lengthMenu: [
       [10, 25, 50, -1],
       ['10 rows', '25 rows', '50 rows', 'Show all'],
