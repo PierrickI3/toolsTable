@@ -31,7 +31,7 @@ $(document).ready(function () {
         data: 'Platform',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'Cloud' ? '<span style="color:#27AE60; font-size:16px">☁️</span>' : '🖥️';
+            return data === 'Cloud' ? '<span style="color:#2FAFDF; font-size:25px">☁</span>' : '<span style="font-size:17px">🖥️</span>';
           }
           return data;
         },
@@ -40,7 +40,7 @@ $(document).ready(function () {
         data: 'API',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -49,7 +49,7 @@ $(document).ready(function () {
         data: 'Embeddable',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -58,7 +58,7 @@ $(document).ready(function () {
         data: 'CanEmbedOthers',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -67,7 +67,7 @@ $(document).ready(function () {
         data: 'HasIntegrations',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -79,7 +79,7 @@ $(document).ready(function () {
         data: 'SCs',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -88,7 +88,7 @@ $(document).ready(function () {
         data: 'AEs',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -97,7 +97,7 @@ $(document).ready(function () {
         data: 'SAs',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -106,7 +106,7 @@ $(document).ready(function () {
         data: 'CSMs',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
@@ -115,7 +115,7 @@ $(document).ready(function () {
         data: 'BCs',
         render: function (data, type) {
           if (type === 'display') {
-            return data === 'true' ? '<span style="color:#27AE60; font-size:16px">✔</span>' : '❌';
+            return data === 'true' ? '<span style="color:#27AE60; font-size:20px">✔</span>' : '<span style="font-size:15px">❌</span>';
           }
           return data;
         },
