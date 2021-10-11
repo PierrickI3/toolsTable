@@ -709,7 +709,13 @@ const data = [
 const refreshTable = () => {
   $('#example').DataTable({
     dom: 'Bfrltip',
-    buttons: ['colvis', 'copy', 'csv', 'excel', 'pdf', 'print'],
+    buttons: [
+      {
+        extend: 'excel',
+        text: 'Export to Excel',
+      },
+      'colvis',
+    ],
     stateSave: true,
     orderCellsTop: true,
     pageLength: 50,
