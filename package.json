@@ -1,0 +1,23 @@
+{
+  "name": "toolsTable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierrickI3/toolsTable.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierrickI3/toolsTable/issues"
+  },
+  "homepage": "https://github.com/PierrickI3/toolsTable#readme",
+  "dependencies": {
+    "json-as-xlsx": "^2.1.0"
+  }
+}
