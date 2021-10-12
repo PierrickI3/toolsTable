@@ -924,7 +924,7 @@ const data = [
   },
 ];
 
-// Add coefficients
+// Calculate scores
 for (let index = 0; index < data.length; index++) {
   const currentItem = data[index];
   for (let index = 0; index < coefficients.length; index++) {
@@ -968,8 +968,6 @@ for (let index = 0; index < data.length; index++) {
   }
 }
 
-console.log('data with coefficients:', data);
-
 const refreshTable = () => {
   $('#example').DataTable({
     dom: 'Bfrltip',
@@ -983,6 +981,13 @@ const refreshTable = () => {
     stateSave: true,
     orderCellsTop: true,
     pageLength: 50,
+    createdRow: function (row, data, dataIndex) {
+      console.log('row:', row);
+      console.log('data:', data);
+      if (data.similar?.length > 0) {
+        $(row).css('background-color', 'rgba(255, 80, 31, 0.3)');
+      }
+    },
     lengthMenu: [
       [10, 25, 50, -1],
       ['10 rows', '25 rows', '50 rows', 'Show all'],
@@ -1104,7 +1109,3 @@ const refreshTable = () => {
     },
   });
 };
-
-// Teams
-//
-// SCs (APAC)
