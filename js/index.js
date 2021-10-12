@@ -5,9 +5,58 @@ $(document).ready(function () {
   refreshTable();
 });
 
+const coefficients = [
+  {
+    name: 'source',
+    type: 'source',
+    value: 0.5,
+  },
+  {
+    name: 'platform',
+    type: 'platform',
+    value: 0.5,
+  },
+  {
+    name: 'API',
+    type: 'boolean',
+    value: 1,
+  },
+  {
+    name: 'embeddable',
+    type: 'boolean',
+    value: 0.5,
+  },
+  {
+    name: 'canEmbedOthers',
+    type: 'boolean',
+    value: 0.5,
+  },
+  {
+    name: 'hasIntegrations',
+    type: 'boolean',
+    value: 1,
+  },
+  // {
+  //   name: 'costPerUser',
+  //   type: 'number',
+  //   value: 0.1,
+  // },
+  // {
+  //   name: 'totalUsers',
+  //   type: 'number',
+  //   value: 1,
+  // },
+  {
+    name: 'usedBy',
+    type: 'length',
+    value: 2,
+  },
+];
+
 const data = [
   {
     name: 'Adobe Creative Cloud',
+    score: 0,
     description: 'Applications and services that gives subscribers access to a collection of software used for graphic design, video editing, web development, photography',
     company: 'Adobe',
     source: 'External',
@@ -26,6 +75,7 @@ const data = [
   },
   {
     name: 'Aha',
+    score: 0,
     description: 'Allows users to build and share visual roadmaps. It links key strategic goals and initiatives to releases and features',
     company: 'Aha',
     source: 'External',
@@ -44,6 +94,7 @@ const data = [
   },
   {
     name: 'Alinean',
+    score: 0,
     description: 'Business value marketing and selling messaging and tools',
     company: 'Alinean',
     source: 'External',
@@ -62,6 +113,7 @@ const data = [
   },
   {
     name: 'Aviso',
+    score: 0,
     description: 'Predictive AI platform for forecasting, risk mitigation and revenue acceleration',
     company: 'Aviso',
     source: 'External',
@@ -79,6 +131,7 @@ const data = [
   },
   {
     name: 'Bitbucket',
+    score: 0,
     description: 'Code repositories',
     company: 'Atlassian',
     source: 'External',
@@ -97,6 +150,7 @@ const data = [
   },
   {
     name: 'BriefingSource',
+    score: 0,
     description: 'Event management',
     company: 'EchoVision',
     source: 'External',
@@ -114,6 +168,7 @@ const data = [
   },
   {
     name: 'Camtasia',
+    score: 0,
     description: 'Create video tutorials and presentations',
     company: 'Techsmith',
     source: 'External',
@@ -132,6 +187,7 @@ const data = [
   },
   {
     name: 'CC Portal',
+    score: 0,
     description: 'Set of tools used to deploy use cases, assist with migrations, handle Competency Centers requests',
     company: 'Genesys',
     source: 'Internal',
@@ -150,6 +206,7 @@ const data = [
   },
   {
     name: 'Confluence',
+    score: 0,
     description: 'Project Collaboration',
     company: 'Atlassian',
     source: 'External',
@@ -168,6 +225,7 @@ const data = [
   },
   {
     name: 'Docebo (GenED)',
+    score: 0,
     description: 'Learning suite',
     company: 'Docebo',
     source: 'External',
@@ -186,6 +244,7 @@ const data = [
 
   {
     name: 'DocuSign',
+    score: 0,
     description: 'For contract execution with customers',
     company: 'DocuSign',
     source: 'External',
@@ -204,6 +263,7 @@ const data = [
   },
   {
     name: 'Formstack Documents (ex-Webmerge)',
+    score: 0,
     description: 'Customizable document templates',
     company: 'FormStack',
     source: 'External',
@@ -221,6 +281,7 @@ const data = [
   },
   {
     name: 'GDemo',
+    score: 0,
     description: 'Access to ready-to-go demos',
     company: 'Genesys',
     source: 'Internal',
@@ -239,6 +300,7 @@ const data = [
   },
   {
     name: 'Genesys Cloud',
+    score: 0,
     description: 'Communication platform',
     company: 'Genesys',
     source: 'Internal',
@@ -257,6 +319,7 @@ const data = [
   },
   {
     name: 'GitHub',
+    score: 0,
     description: 'Code repositories',
     company: 'Microsoft',
     source: 'External',
@@ -275,6 +338,7 @@ const data = [
   },
   {
     name: 'Gong',
+    score: 0,
     description: 'Sales AI and machine learning tool. Synching Zoom conversations back into Salesforce',
     company: 'Gong.io',
     source: 'External',
@@ -292,6 +356,7 @@ const data = [
   },
   {
     name: 'Google Sheets',
+    score: 0,
     description: 'Spreadsheets',
     company: 'Google',
     source: 'External',
@@ -310,6 +375,7 @@ const data = [
   },
   {
     name: 'Jenkins',
+    score: 0,
     description: 'CI/CD suite',
     company: 'Jenkins',
     source: 'External',
@@ -327,6 +393,7 @@ const data = [
   },
   {
     name: 'JIRA',
+    score: 0,
     description: 'Issue tracking, bug tracking and agile project management',
     company: 'Atlassian',
     source: 'External',
@@ -345,6 +412,7 @@ const data = [
   },
   {
     name: 'Knime',
+    score: 0,
     description: 'Analytics ML',
     company: 'Knime',
     source: 'External',
@@ -362,6 +430,7 @@ const data = [
   },
   {
     name: 'LinkedIn Sales Navigator',
+    score: 0,
     description: 'Social selling platform that provides features that focus on helping find prospects and build relationships',
     company: 'LinkedIn',
     source: 'External',
@@ -380,6 +449,7 @@ const data = [
   },
   {
     name: 'LucidChart',
+    score: 0,
     description: 'Web-based proprietary platform that allows users to collaborate on drawing, revising and sharing charts and diagrams',
     company: 'Lucid Software',
     source: 'External',
@@ -398,6 +468,7 @@ const data = [
   },
   {
     name: 'Nintex',
+    score: 0,
     description: 'Business process Automation, workflow software licensing',
     company: 'Nintex',
     source: 'External',
@@ -416,6 +487,7 @@ const data = [
   },
   {
     name: 'Office 365',
+    score: 0,
     description: 'Microsoft Office 365',
     company: 'Microsoft',
     source: 'External',
@@ -425,7 +497,7 @@ const data = [
     canEmbedOthers: true,
     hasIntegrations: true,
     costPerUser: '',
-    totalUsers: '',
+    totalUsers: 5000,
     country: 'USA',
     //usedBy: ['SCs', 'AEs', 'BCs', 'CSMs'],
     usedBy: ['CCC (EMEA)', 'CCC (NA)', 'GTS', 'SCs (EMEA)', 'SCs (LATAM)', 'SCs (NA)'],
@@ -434,6 +506,7 @@ const data = [
   },
   {
     name: 'OneDrive',
+    score: 0,
     description: 'File sharing and collaboration',
     company: 'Microsoft',
     source: 'External',
@@ -452,6 +525,7 @@ const data = [
   },
   {
     name: 'Prezi',
+    score: 0,
     description: 'Presentation',
     company: 'Prezi',
     source: 'External',
@@ -470,6 +544,7 @@ const data = [
   },
   {
     name: 'QVidian',
+    score: 0,
     description: 'Proposal Management/Creator',
     company: 'Upland Software',
     source: 'External',
@@ -488,6 +563,7 @@ const data = [
   },
   {
     name: 'ReferenceEdge',
+    score: 0,
     description: 'Used by Advisors and Partner Success Managers to confirm contacts for reference activity',
     company: 'Point of Reference',
     source: 'External',
@@ -506,6 +582,7 @@ const data = [
   },
   {
     name: 'Revegy',
+    score: 0,
     description: 'Sales execution platform with built-in visualizations for account planning, providing sales teams with deal-winning insights',
     company: 'Revegy',
     source: 'External',
@@ -524,6 +601,7 @@ const data = [
   },
   {
     name: 'RFP.io',
+    score: 0,
     description: 'Automates and streamlines the process of responding to a request for proposal (RFP)',
     company: 'RFPIO',
     source: 'External',
@@ -542,6 +620,7 @@ const data = [
   },
   {
     name: 'Salesforce',
+    score: 0,
     description: 'CRM',
     company: 'Salesforce',
     source: 'External',
@@ -551,7 +630,7 @@ const data = [
     canEmbedOthers: true,
     hasIntegrations: true,
     costPerUser: '',
-    totalUsers: '',
+    totalUsers: 5000,
     country: 'USA',
     //usedBy: ['SCs', 'AEs', 'BCs', 'CSMs'],
     usedBy: ['CCC (EMEA)', 'CCC (NA)', 'GTS', 'SCs (EMEA)', 'SCs (LATAM)', 'SCs (NA)'],
@@ -560,6 +639,7 @@ const data = [
   },
   {
     name: 'Salesforce for CPQ',
+    score: 0,
     description: 'Customized application built over Salesforce to handle CPQ functionality',
     company: 'Genesys',
     source: 'External',
@@ -578,6 +658,7 @@ const data = [
   },
   {
     name: 'Seismic',
+    score: 0,
     description: 'Project Management & Enablement, Content Management tools',
     company: 'Seismic',
     source: 'External',
@@ -596,6 +677,7 @@ const data = [
   },
   {
     name: 'Skype',
+    score: 0,
     description: 'Telecommunications application that specializes in providing VoIP-based videotelephony, videoconferencing and voice calls',
     company: 'Microsoft',
     source: 'External',
@@ -614,6 +696,7 @@ const data = [
   },
   {
     name: 'Slack',
+    score: 0,
     description: 'Collaboration and communication platform',
     company: 'Microsoft',
     source: 'External',
@@ -632,6 +715,7 @@ const data = [
   },
   {
     name: 'SmartSheet',
+    score: 0,
     description: 'Collaboration and work management',
     company: 'SmartSheet',
     source: 'External',
@@ -650,6 +734,7 @@ const data = [
   },
   {
     name: 'Tableau',
+    score: 0,
     description: 'Data analysis and reporting',
     company: 'Tableau',
     source: 'External',
@@ -668,6 +753,7 @@ const data = [
   },
   {
     name: 'Taiga',
+    score: 0,
     description: 'Open Source Project Management, Scrum, Kanban, Agile',
     company: 'Taiga',
     source: 'External',
@@ -686,6 +772,7 @@ const data = [
   },
   {
     name: 'Teams',
+    score: 0,
     description: 'Business communication platform ',
     company: 'Microsoft',
     source: 'External',
@@ -704,6 +791,7 @@ const data = [
   },
   {
     name: 'Traction On Demand',
+    score: 0,
     description: 'Automates complex account hierarchies for up-sell opportunities',
     company: 'Traction On Demand',
     source: 'External',
@@ -722,6 +810,7 @@ const data = [
   },
   {
     name: 'Trello',
+    score: 0,
     description: 'Project Management',
     company: 'Atlassian',
     source: 'External',
@@ -740,6 +829,7 @@ const data = [
   },
   {
     name: 'TruVoice',
+    score: 0,
     description: 'Win/Loss insights and analysis',
     company: 'Primary Intelligence',
     source: 'External',
@@ -758,6 +848,7 @@ const data = [
   },
   {
     name: 'VMWare',
+    score: 0,
     description: 'Cloud computing and virtualization',
     company: 'VMWare',
     source: 'External',
@@ -776,6 +867,7 @@ const data = [
   },
   {
     name: 'WalkMe',
+    score: 0,
     description: 'Step by step guide. Used by Sales ops to assist them. Workflow tool that sits on top of Salesforce',
     company: 'WalkMe',
     source: 'External',
@@ -794,6 +886,7 @@ const data = [
   },
   {
     name: 'WhatsApp',
+    score: 0,
     description: 'Cross-platform centralized instant messaging (IM) and voice-over-IP (VoIP) service ',
     company: 'Facebook',
     source: 'External',
@@ -812,6 +905,7 @@ const data = [
   },
   {
     name: 'Zoom',
+    score: 0,
     description: 'Video conferencing',
     company: 'Zoom',
     source: 'External',
@@ -821,7 +915,7 @@ const data = [
     canEmbedOthers: false,
     hasIntegrations: true,
     costPerUser: '',
-    totalUsers: '',
+    totalUsers: 5000,
     country: 'USA',
     //usedBy: ['SCs', 'AEs', 'SAs', 'BCs', 'CSMs'],
     usedBy: ['CCC (EMEA)', 'CCC (NA)', 'GTS', 'SCs (EMEA)', 'SCs (LATAM)', 'SCs (NA)'],
@@ -829,6 +923,52 @@ const data = [
     comments: '',
   },
 ];
+
+// Add coefficients
+for (let index = 0; index < data.length; index++) {
+  const currentItem = data[index];
+  for (let index = 0; index < coefficients.length; index++) {
+    const coefficient = coefficients[index];
+    switch (coefficient.type) {
+      case 'boolean':
+        if (currentItem[coefficient.name]) {
+          console.log(`boolean: Add ${coefficient.value} to coefficient: ${currentItem.score}`);
+          currentItem.score += coefficient.value;
+        }
+        break;
+      case 'length':
+        if (currentItem[coefficient.name] !== ['']) {
+          console.log(`length: Add ${currentItem[coefficient.name].length * coefficient.value} to score: ${currentItem.score}`);
+          currentItem.score += currentItem[coefficient.name].length * coefficient.value;
+        }
+        break;
+      case 'number':
+        if (currentItem[coefficient.name] !== '') {
+          console.log(`number: Add ${currentItem[coefficient.name] * coefficient.value} to score: ${currentItem.score}`);
+          currentItem.score += currentItem[coefficient.name] * coefficient.value;
+        }
+        break;
+      case 'platform':
+        if (currentItem[coefficient.name] === 'cloud') {
+          console.log(`platform: Add ${coefficient.value} to score: ${currentItem.score}`);
+          currentItem.score += coefficient.value;
+        }
+        break;
+      case 'source':
+        if (currentItem[coefficient.name] === 'Internal') {
+          console.log(`source: Add ${coefficient.value} to score: ${currentItem.score}`);
+          currentItem.score += coefficient.value;
+        }
+        break;
+      default:
+        console.error(`unknown: Add ${coefficient.value} to score: ${currentItem.score}`);
+        currentItem.score += currentItem[coefficient.name] * coefficient.value;
+        break;
+    }
+  }
+}
+
+console.log('data with coefficients:', data);
 
 const refreshTable = () => {
   $('#example').DataTable({
@@ -857,6 +997,7 @@ const refreshTable = () => {
           return data;
         },
       },
+      { data: 'score' },
       { data: 'description' },
       { data: 'company' },
       {
@@ -927,6 +1068,7 @@ const refreshTable = () => {
     ],
     data: data,
     initComplete: function () {
+      // Build filters textboxes
       var api = this.api();
 
       // For each column
