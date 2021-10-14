@@ -351,7 +351,7 @@ const data = [
     usedBy: ['CCC (EMEA)', 'CCC (LATAM)', 'CCC (NA)', 'GSS', 'GTS', 'SCs (EMEA)', 'SCs (LATAM)', 'SCs (NA)'],
     usedByPartners: false,
     similar: 'Teams, Slack, Zoom',
-    comments: '',
+    comments: 'In EMEA alone, 20 orgs are used by SCs but are managed by CCC EMEA',
   },
   {
     name: 'GitHub',
