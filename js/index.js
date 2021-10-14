@@ -1016,14 +1016,14 @@ const data = [
     embeddable: true,
     canEmbedOthers: false,
     hasIntegrations: true,
-    costPerUser: '',
-    payingUsers: '',
-    totalUsers: 5000,
+    costPerUser: 5.87,
+    payingUsers: 6700,
+    totalUsers: 6700,
     country: 'USA',
     usedBy: ['CCC (EMEA)', 'CCC (LATAM)', 'CCC (NA)', 'GSS', 'GTS', 'SCs (EMEA)', 'SCs (LATAM)', 'SCs (NA)'],
     usedByPartners: false,
     similar: 'Genesys Cloud, Teams',
-    comments: '',
+    comments: 'Cost per user is an average of the multiple different licenses being used',
   },
 ];
 
